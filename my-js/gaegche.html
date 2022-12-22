@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{ font-size: 2rem;}
+        h1{ background: yellow;}
+    </style>
+    <script>
+      
+    </script>
+</head>
+<body>
+    <h1>OBJECT</h1>
+    <script>
+        var person = {};
+            person.username = 'john';
+            person.age = 18;      
+            console.log(person.age);
+
+            person.introduce = function () {
+                console.log('안녕 내이름은 '+ this.username + '이고  나이는 '+ this.age );
+            };
+
+        var person2 = {
+            username:'zena', //속성 property
+            age:23,
+            introduce: function () {
+                console.log('안녕 내이름은 '+ this.username + '이고  나이는 '+ this.age );
+            } // method
+        };
+        
+        person.introduce();
+        person2.introduce();
+
+    </script>
+    <script>
+        //생성자(constructor)
+        function Person(username, age) {
+            this.username = username;
+            this.age = age;
+            this.introduce = function(){
+                document.write('안녕 내 이름은 ' + this.username + '이고 ' + '나이는 ' + this.age + '야')
+            };
+        }
+        //인스턴스(instance)
+        var p1 = new Person('바보', 15);
+        var p2 = new Person('띵딩이', 14);
+
+        p1.introduce();
+        p2.introduce();
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <style>
+        body{ font-size: 2rem;}
+        h3{ background: yellow;}
+        .menu { display: flex;}
+        .menu-link {
+            margin: .5em;
+            padding: .5em;
+            color: #fff;
+            background:dodgerblue;
+            text-decoration: none;
+            list-style: none;
+        }
+        .menu-active { background: orange;}
+    </style>    
+ 
+    
+</head>
+<body>
+    <h3 id="main-title">
+        <small>event</small>               
+        이벤트
+    </h3>
+    
+    <nav class="menu">
+        <a href="#" class="menu-link" data-menu="1">menu 1</a>
+        <a href="#" class="menu-link" data-menu="2">menu 2</a>
+        <a href="#" class="menu-link" data-menu="3">menu 3</a>
+    </nav>
+
+    <script>
+    // 이벤트 연습 : 여러가지 가능성 테스트 
+        var menulink = document.querySelectorAll('.menu-link');//클릭할 곳 찾아오기
+        function clickMenuHandler () {
+            // for (var i = 0; i<menulink.length; i++) {
+            //     menulink[i].classList.remove('menu-active'); //menulink을 초기화 한다, for문의 사용은 느리게하여 좋지 않다
+            // }
+
+            var menuactive = document.querySelector('.menu-active');
+            if (menuactive) {
+                menuactive.classList.remove('menu-active');// menuactive가 초기에 활성화 된곳이 없어 에러발생 if문으로 true일때 실행되게 변경
+            } //돔 스크립트가 연사자의 속도가 느린 단점이 있다
+
+            this.classList.add('menu-active'); //this는 menulink[]을 가르킨다 
+        } //클릭할 곳 가져와서 이벤트 함수 글기
+        for (var i = 0; i <menulink.length; i++) {
+            menulink[i].addEventListener('click', clickMenuHandler);
+        } //이벤트를 menulink에 걸어주는 함수 >> 메소드는 addEventListener       
+        
+    </script>
+    <script>
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <style>
+        body{ font-size: 2rem;}
+        h3{ background: yellow;}
+        .sh img {
+            width: 50px;           
+        }
+        .sh {
+            display:inline-block; 
+            list-style: none;
+        }
+        .special {
+            background: pink;
+        }
+        .l-google {
+            color: red;
+        }
+    </style>    
+ 
+    
+</head>
+<body>
+    <h3 id="main-title">
+        <small>event</small>               
+        이벤트
+    </h3>
+    
+    <ul class="sh-mom">
+        <li class="sh">
+            <img src="img/sh1.png">
+            <a  class="l-google" href="https://google.com">google</a>
+        </li>
+        <li class="sh">
+            <img src="img/sh2.png">            
+        </li>
+        <li class="sh"><img src="img/sh3.png"></li>
+    </ul>
+
+    <button class="btn">클릭하세요</button>
+
+    <script>
+        //클릭이벤트로 발생
+        var maintitle = document.querySelector('#main-title'); //이벤트 발생할 곳
+        var btn = document.querySelector('.btn'); //이벤트 동작시킬 곳
+        function btnClickHandler() {
+            maintitle.style.background = 'dodgerblue';
+        } //이베트가 발생하면 실행 될 함수
+        //btn.onclick = btnClickHandler; 간단하게 실행 시킬수 있으나 매개변수 없다
+        btn.addEventListener('click', btnClickHandler);//btn을 click하였을때 btnclickHandler함수가 실행됨
+    </script>
+    <script>
+        
+    </script>
+    
+</body>
+</html>

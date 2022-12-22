@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <style>
+        body {
+            font-size: 2rem;
+        }
+
+        h3 {
+            background: yellow;
+        }
+
+        .menu {
+            display: flex;
+        }
+
+        .menu-link {
+            margin: .5em;
+            padding: .5em;
+            color: #fff;
+            background: dodgerblue;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .menu-active {
+            background: orange;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h3 id="main-title">
+        <small>event</small>
+        이벤트
+    </h3>
+
+    <nav class="menu">
+        <a href="#" class="menu-link" data-menu="1">menu 1</a>
+        <a href="#" class="menu-link" data-menu="2">menu 2</a>
+        <a href="#" class="menu-link" data-menu="3">menu 3</a>
+    </nav>
+
+    <script>
+        //이벤트 위임방식 , 함수분리 후 호출
+        var currentMenu;
+        var Menu = document.querySelector('.menu');
+
+        function activate(elem) {
+            elem.classList.add('menu-active');
+            currentMenu = elem;
+        }
+        function inactivate(elem) {
+            elem.classList.remove('menu-active');
+        }
+
+        function clickHandler(e) {
+            if (currentMenu) {
+                inactivate(currentMenu);
+            }
+            activate(e.target);
+        }
+        Menu.addEventListener('click', clickHandler);
+        activate(document.querySelectorAll('.menu-link')[0]);
+
+    </script>
+    <script>
+       
+    </script>
+
+</body>
+</html>

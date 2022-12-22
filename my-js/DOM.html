@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document OBject Model</title>
+    <style>
+        body{ font-size: 2rem;}
+        h3{ background: yellow;}
+        .sh img {
+            width: 50px;           
+        }
+        .sh {
+            display:inline-block;
+            list-style: none;
+        }
+        .special {
+            background: pink;
+        }
+        .l-google {
+            color: red;
+        }
+    </style>
+    <script>
+        // var title = document.getElementById('main-title');
+        // console.log(title); //null찍힘, id까지 읽기 전 이라 null반환 body안에 넣어면 정상작동 함
+
+        // window.onload = function(){
+        //     var title = document.getElementById('main-title');
+        //     console.log(title); //load속성에 함수을 넣어서 전체문서가 load가 되면 함수실행됨, 예전 형식
+        // };
+
+        // window.addEventListener('load', function() {
+        //     var title = document.getElementById('main-title');
+        //     console.log(title); //함수의 첫번째 매개변수 load가 실행되면 두번째 function실행됨 ,3번째 매변수 기본값은 False다
+        // });
+
+        //  window.addEventListener('DOMContentLoaded', function() {
+        //     var title = document.getElementById('main-title');
+        //     console.log(title); //태그의 객체만 인식 실행되면 함수 실행 함. 빠름.
+        //  });
+ 
+    </script>
+</head>
+<body>
+    <h3 id="main-title">
+        <span>Hello 00</span>
+        <span>Hello 11</span>        
+        DOM
+    </h3>
+    <article>
+        <header class="main-header">HEADER</header>
+        <section>
+            <header>header</header>
+            section 1
+        </section>        
+    </article>
+    <ul class="sh-mom">
+        <li class="sh">
+            <img src="img/sh1.png">
+            <a  class="l-google" href="https://google.com">google</a>
+        </li>
+        <li class="sh">
+            <img src="img/sh2.png">            
+        </li>
+        <li class="sh"><img src="img/sh3.png"></li>
+    </ul>
+
+    <script>
+        // var title = document.getElementById('main-title');
+        // console.log(title); //위에껏 읽고 내려오니까 load속성이 필요없음. 요즘사용 잘 하지 않음
+
+        // var titlespan = title.getElementsByTagName('span');
+        // console.log(titlespan[1]); //var title에서 부터 찾는다 title.get....시작한다 잘 사용하지 않음
+
+        // var maintitle = document.querySelector('#main-title span');
+        // console.log(maintitle); //id(#)의 하위 엘리멘트(span)
+        // var sh = document.querySelectorAll('.sh');
+        // console.log(sh[1]); //class(.)의 1번째([1])  
+        // for (var i = 0; i<sh.length; i++){
+        //     sh[i].style.border = '1px solid red';
+        // }
+        var link =document.querySelector('.sh a');
+    //     console.log(link.getAttribute('href')); //속성값 구하기 
+    //     var link=document.querySelector('.sh a');
+    //     console.log(link.getAttribute('class')) ;//속성값 구하기   
+        
+    //     link.setAttribute('href', 'https://daum.net')
+    //     console.log(link.getAttribute('href'))
+    </script>
+
+    <script>
+    // class공부
+            // link.className = 'special'; //red속성의 클래스네임을 special크래스 속성으로 변경
+            // link.className = 'special l-google'; //클래스 속성 두가지 다 적용하는 방법
+            link.classList.add('special'); //classlist객체의 add메소드를 이용항여 클래글 더하여 줌
+            setTimeout(function(){
+                link.classList.remove('l-google');
+            }, 2000); //class를 삭제하는 방법  2초후에 함수를 실행하겠다는 내용, 매개변수인자를 (,)로
+                         // 구분하여 여러개의 class를 더하고 삭제 할수 있따
+            console.log(link.classList.contains('special')) //contains는 참과 거짓값을 반환한다
+    </script>
+    <script>
+    // 콘텐츠를 생성하여 조립하는 공부
+        var momElm = document.querySelector('.sh-mom')//생성될 엘리멘트가 들러갈 자리
+        var listElm = document.createElement('li'); //생성할 엘리멘트
+        listElm.innerHTML = '<span>th소현이 이쁨</span>'; //엘리멘트안에 넣을 내용
+        momElm.appendChild(listElm);//부모 엘리멘트에 조립함
+    </script>
+    
+</body>
+</html>

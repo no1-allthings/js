@@ -1,0 +1,1 @@
+document.write("외부 js에서 출력");

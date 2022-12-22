@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <style>
+        body{ font-size: 2rem;}
+        h3{ background: yellow;}
+        .menu { display: flex;}
+        .menu-link {
+            margin: .5em;
+            padding: .5em;
+            color: #fff;
+            background:dodgerblue;
+            text-decoration: none;
+            list-style: none;
+        }
+        .menu-active { background: orange;}
+    </style>    
+ 
+    
+</head>
+<body>
+    <h3 id="main-title">
+        <small>event</small>               
+        이벤트
+    </h3>
+    
+    <nav class="menu">
+        <a href="#" class="menu-link" data-menu="1">menu 1</a>
+        <a href="#" class="menu-link" data-menu="2">menu 2</a>
+        <a href="#" class="menu-link" data-menu="3">menu 3</a>
+    </nav>
+
+    <script>  
+    //변수설정 방식
+        var currentMenu ; //현재 할성화된 곳을 담을 변수          
+        var menuLink = document.querySelectorAll('.menu-link');
+        function clickMenuHandler() {
+            if (currentMenu) {
+                currentMenu.classList.remove('menu-active');
+            }            
+            this.classList.add('menu-active');
+            currentMenu = this;                 
+  
+        }
+        for (var i = 0; i < menuLink.length; i++){
+            menuLink[i].addEventListener('click', clickMenuHandler);
+        }
+     
+        
+    </script>
+    <script>
+        
+    </script>
+    
+</body>
+</html>
