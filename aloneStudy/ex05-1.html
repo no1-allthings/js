@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //프로시저형태의 함수
+  //   const f = function(){
+  //     console.log(`안녕 + ${x}`)
+  //   }
+  //   const x =10    
+  //   f()    
+  </script>
+  <script>
+  //   //수학적 함수
+  //   const f1 = function(x){
+  //     return x+' = 리턴값 사용예'
+  //   }
+  //   console.log(f1(5)) 
+  //   console.log(f1) 
+  </script>
+  <script>
+    // const f3 = function(a, b){
+    //   let f3t = ''
+    //   for(let i = a; i<=b; i++){ 
+    //     f3t += i           
+    //   }
+    //   return f3t     
+    // }
+    // console.log(f3(1,10))        
+  </script>
+  <script>
+    // const f4 = function(limit){
+    //   let f4t = 0
+    //   for(let i = 0; i<=limit; i++){
+    //     f4t += i
+    //   }
+    //   return f4t        
+    // }
+    // console.log(f4(10))
+  </script>
+  <script>
+    // const isLeapYear = function(year){
+    //   if(year%4===0 && year%100!==0 ||year%400===0){
+    //     console.log(`${year}년은 윤년입니다`)
+    //   }else{
+    //     console.log(`${year}은 평년입니다`)
+    //   }
+    // }
+    // isLeapYear(2020)
+    // isLeapYear(2010)
+    // isLeapYear(2000)
+    // isLeapYear(1900)
+
+    // const isLeapYear = function(year){
+    //   return(year%4===0 && year%100!==0 ||year%400===0)
+    // }
+    // console.log(isLeapYear(2020))
+    // console.log(isLeapYear(2010))
+    // console.log(isLeapYear(2000))
+    // console.log(isLeapYear(1900))
+  </script>
+  <script>
+    // const Value = [54,99,23,41,5,7,1]
+    // const min = function(Value){
+    //   let minOut = Value[0];
+    //   for (const i of Value) {
+    //     minOut > i;
+    //     minOut = i;
+    //   }
+    //   return minOut;
+    // }
+    // console.log(min(Value))
+
+    // const Value = [54,99,23,41,5,7,1]
+    // const max = function(Value){
+    //   let maxOut = Value[0];
+    //   for (const i of Value) {
+    //     if(maxOut < i)
+    //     maxOut =i;
+    //   }
+    //   return maxOut;
+    // } 
+    //   console.log(max(Value))
+  </script>
+  <script>
+  //    const f6 = function(a,b,...items){
+  //     console.log(a,b,items)
+  //    }
+  //    f6()
+  //    f6(1,2)
+  //    f6(2,3,4)
+  //    f6(10,20,3,8,9)
+  // </script>
+  <script>
+  //   const f7 = function(a,b,c) {
+  //     console.log(a,b,c)
+  //   }
+  //   const j = [21,31,41]   
+  //   f7(j[0],j[1],j[2])
+  //   f7(...j)
+  
+  </script>
+  <script>
+    // const item = [45,25,36,15,44,99]
+    // const item1 = Number(5,4,3,5,8,10,1)//오류
+    // const f8 = function(...items) {
+    //   let f8t = items[0] 
+    //   for (const i of items) {
+    //      if(i<f8t) {
+    //       f8t = i
+    //      } 
+    //     }
+    //   return f8t
+    // }     
+    // console.log(f8(...item))
+    // console.log(...item)
+    // console.log(item)
+    // console.log('f8(item1)')//오류
+  </script>
+  <script>
+    const max = function(num, ...arg) {
+      let out ;      
+      let items ;
+      if(typeof(num)==='number') {
+        out = num;
+        items = arg ;
+      }else if(Array.isArray(num)) {
+        out = num[0] ;
+        items = num ;
+      }
+      for(let para of items) {
+        if(out < para) {
+          out = para
+        }
+      }
+      return out ;
+    }
+    console.log(max(7,1,3,5,9,4))
+    console.log(max([7,1,3,5,9,4]))
+  </script>
+  <script>
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const cc = ['감','꿀','배','죽','밤']
+    // for(let c in cc) {
+    // document.write(`${Number(c)+1}번째는 ${cc[c]}이다\n`) 
+    // }  in은 인덱스 번호가 들어감
+    
+    // for( let i of cc) {
+    //   alert(`번쩨음식이름:${i}`)    
+    // } of는 배열의 요소가 들어감
+
+    // for( let i = 0; i < cc.length; i++) {
+    //   document.write(`${Number(i)+1}번째는 ${cc[i]}이다\n`)
+    // }
+
+    // for(let i = cc.length-1; i>=0; i--){
+    //   console.log(Number(i)+1, cc[i])
+    // }
+
+   
+  //   let tt =0 ;
+  //   for(let i = 1; i <101; i++){
+  //     tt+=i
+  //   }
+  //   document.write(tt) 
+  // </script> 
+
+  <script>
+    // let z = 0
+    // let i = 0
+    // while( z<=10){ 
+    //   i =i+z      
+    //   z += 1       
+    // }
+    // alert(i); 
+      // let t = 0;
+      // let tt = [1,2,3,4,5]
+      // while( t < tt.length){
+      //   console.log(`${t}째는 ${tt[t]}이다`)
+      //   t++
+      // } 
+    // for(let i = 0; true; i++){
+    //   alert(i+'번째 반복임');
+    //   const hhh = confirm('go?');
+    //   if(!hhh){
+    //     break;
+    //   }     
+    // }
+    // let ttt = 0
+    // for( i = 0; i <=5; i++){
+    //   if(i%2===0){
+    //     continue       
+    //   }
+    //   ttt += i
+    // }
+    // alert(ttt)
+  </script>
+  <script>
+    // let out=``
+    // let st = '*'//안됨repeat
+    // for(let i = 1; i<10; i++){
+    //   for(let j = 0; j<i; j++){
+    //     out += '*'
+    //   }
+    //   out += '\n'
+    // }   
+    // console.log(out)
+
+    let star = ``
+    // for(let i = 1; i<8; i++){
+    //   for(j=8; j>i; j--){
+    //     star += ' '
+    //   }
+    //   for(let k=0; k<i*2-1; k++){
+    //     star += '*'
+    //   }
+    //   star += '\n'
+    // }
+    // alert(star)
+
+    for(let i=1; i<8; i++){
+      for(let j=8; j>i; j--){
+        star += ' '
+      }
+      for(let k=0; k< 2*i-1; k++){
+        star += '*'       
+      }
+      star += '\n'           
+    }   
+   
+   
+    for(let n=1; n<8; n++){
+      for(let m=0; m<=n; m++){
+        star += ' '
+      }
+      for(let o = 12; o>n*2-1; o--){
+        star += '*'
+      }
+      star += '\n'
+    }
+    console.log(star)
+  </script>
+</body>
+</html>

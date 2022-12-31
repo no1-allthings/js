@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // const 테스트 = function(콜백함수) {
+    //   // console.log(a)//함수()가 호출됨
+    //   콜백함수('콜백함수의 매개변수') //매개변수로 함수로 호줄받아 테스트()함수안에 함수()함수가 실행됨
+    // }
+    // // 테스트(10)
+    // // 테스트('안녕')
+    // // 테스트(true)
+    // const 함수 = function(콜백함수_매개변수) {
+    //   console.log(`${콜백함수_매개변수} hi!!!`)
+    // }  //콜백함수
+    // // 함수()
+    // 테스트(함수)
+  </script>
+  <script>
+    // const 테스트 = function(배열, 콜백함수) {
+    //   for(let 값 of 배열) {
+    //   콜백함수(값);
+    //   }
+    // }
+    // const 함수 = function(콜백매개변수) {
+    //   console.log(`${콜백매개변수}번째 안녕!!`)
+    // } 
+    // 테스트([5,10,99],함수)    
+  </script>
+  <script>
+    const 테스트 = function(배열, 콜백함수) {
+      for(let 값 of 배열) {
+      콜백함수(값);
+      }
+    }    
+    테스트([10,20,30],function(콜백매개변수) {
+      console.log(`${콜백매개변수}번째 안녕!!`)})
+  </script>
+</body>
+</html>
